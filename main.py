@@ -6,7 +6,7 @@ import time
 import threading
 
 # Получаем токен из переменных окружения
-TOKEN = os.environ.get('8739129839:AAEvhAariFI8cTLAWeDTmGnXEMe8ULvlQ90')
+TOKEN = os.environ.get('BOT_TOKEN')
 
 if not TOKEN:
     raise ValueError("Не найден BOT_TOKEN в переменных окружения!")
@@ -91,7 +91,7 @@ def start_command(message):
     subscribed_users.add(chat_id)
     bot.send_message(
         chat_id, 
-        "(2.0)Привет! Я добавил тебя в список рассылки.\nТеперь я слежу и за **новостями**, и за **новинками каталога** Звезды!",
+        "Привет! Я добавил тебя в список рассылки.\nТеперь я слежу и за **новостями**, и за **новинками каталога** Звезды!",
         parse_mode='Markdown'
     )
 
